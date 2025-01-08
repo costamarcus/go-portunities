@@ -10,18 +10,16 @@ import (
 
 // @BasePath /api/v1
 
-// @Sumary Delete opening
+// @Summary Delete opening
 // @Description Delete a new job opening
 // @Tags Openings
 // @Accept json
 // @Produce json
 // @Param id query string true "Opening identification"
-// @Sucess 200 {object} DeleteOpeningResponse
+// @Success 200 {object} DeleteOpeningResponse
 // @Failure 400 {object} ErrorResponse
 // @Failure 404 {object} ErrorResponse
-// @Failure 500 {object} ErrorResponse
 // @Router /opening [delete]
-
 func DeleteOpeningHandler(ctx *gin.Context) {
 	id := ctx.Query("id")
 	if id == "" {
