@@ -10,6 +10,8 @@ run:
 run-with-docs:
 			@swag init
 			@go run main.go
+install:
+			@go mod tidy
 build: 
 			@go build -o $(APP_NAME) main.go
 test:
